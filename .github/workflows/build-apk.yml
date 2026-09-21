@@ -1,0 +1,47 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Extract project
+        run: |
+          unzip -q asalah-android-ready.zip
+          cd asalah-final
+          npm install
+          npm install @capacitor/android@8
+
+      - name: Add Android platform
+        run: |
+          cd asalah-final
+          npx cap add android
+
+      - name: Sync Capacitor
+        run: |
+          cd asalah-final
+          mkdir -p public
+          npx cap sync android
+
+      - name: Build APK
+        run: |
+          cd asalah-final/android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: asalah-furnishings-apk
+          path: asalah-final/android/app/build/outputs/apk/debug/app-debug.apk
