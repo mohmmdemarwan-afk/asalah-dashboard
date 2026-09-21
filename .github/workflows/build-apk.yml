@@ -1,0 +1,46 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: تحميل المشروع
+        uses: actions/checkout@v4
+
+      - name: تثبيت Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: فك ضغط المشروع
+        run: |
+          unzip -q asalah-android-ready.zip
+          cd asalah-final
+          npm install
+
+      - name: إنشاء مشروع Android
+        run: |
+          cd asalah-final
+          npx cap add android
+
+      - name: تجهيز Capacitor
+        run: |
+          cd asalah-final
+          mkdir -p public
+          npx cap sync android
+
+      - name: بناء APK
+        run: |
+          cd asalah-final/android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: رفع APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: asalah-furnishings-apk
+          path: asalah-final/android/app/build/outputs/apk/debug/app-debug.apk
