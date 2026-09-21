@@ -1,0 +1,34 @@
+{
+  "name": "asalah-furnishings",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cap:sync": "npx cap sync",
+    "cap:android": "npx cap open android",
+    "mobile:build": "vite build --config mobile/vite.config.ts",
+    "android:sync": "npm run mobile:build && npx cap sync android"
+  },
+  "dependencies": {
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/browser": "^8.0.0",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/push-notifications": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest",
+    "@capacitor/cli": "^8.0.0",
+    "vite": "latest",
+    "@vitejs/plugin-react": "latest"
+  }
+}

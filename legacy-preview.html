@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#5b402b">
+<title>مفروشات الأصالة | v4 Preview</title>
+<style>
+:root{--bg:#f4efe9;--card:#fff;--ink:#2d2722;--muted:#81756b;--brand:#65472f;--brand2:#8d6b49;--gold:#b9945a;--line:#e7ddd2;--green:#3f715a;--red:#a33f36;--blue:#536c87;--shadow:0 10px 28px rgba(70,50,30,.07);--r:18px}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}body{padding-bottom:84px}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:16px 14px 30px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,var(--brand),#8f6b47);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}h1{font-size:21px;margin:0}.eyebrow,.muted,small{font-size:12px;color:var(--muted)}.pill{font-size:11px;padding:7px 10px;border-radius:999px;background:#eee4da;color:var(--brand);font-weight:800}
+.view{display:none}.view.active{display:block}.welcome{margin:16px 0;background:linear-gradient(135deg,var(--brand),#9a7651);color:#fff;border-radius:24px;padding:19px;box-shadow:var(--shadow)}.welcome h2{margin:5px 0 7px;font-size:20px}.welcome p{margin:0;opacity:.9;font-size:13px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat,.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.stat{padding:13px}.stat .num{font-size:25px;font-weight:900;margin-top:5px}.section{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:20px 2px 9px}.section h2{font-size:16px;margin:0}.btn{border:0;background:var(--brand);color:#fff;border-radius:12px;padding:10px 13px}.btn.alt{background:#eee6de;color:var(--brand)}.btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--line)}.btn.danger{background:#f9e8e5;color:var(--red)}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:#fff;border:1px solid var(--line);border-radius:15px;padding:11px 5px;color:var(--ink)}.quick b{display:block;font-size:19px;margin-bottom:3px}.panel{padding:13px}.notice{font-size:12px;background:#fff7e8;border:1px solid #ead8b6;color:#7a5c2e;border-radius:12px;padding:10px;line-height:1.7}.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.kpi{background:#faf8f5;border-radius:13px;padding:10px;text-align:center}.kpi b{display:block;font-size:20px}.kpi span{font-size:10px;color:var(--muted)}
+.pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stage{border:1px solid var(--line);background:#faf8f5;border-radius:12px;padding:10px;text-align:center}.stage b{font-size:18px;display:block}.stage span{font-size:10px;color:var(--muted)}.stage.active{border-color:#caa66c;background:#fff8ec}.task-list{display:grid;gap:8px}.task{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#faf8f5;border-radius:13px;padding:10px}.task .main{min-width:0}.task b{display:block}.task .meta{font-size:11px;color:var(--muted);margin-top:3px}.tag{display:inline-flex;align-items:center;gap:4px;padding:6px 9px;border-radius:999px;font-size:10px;background:#e7efe9;color:var(--green);white-space:nowrap}.tag.blue{background:#e8edf4;color:var(--blue)}.tag.gold{background:#f6ead4;color:#8b6324}.tag.red{background:#f9e5e2;color:var(--red)}.tag.gray{background:#ece9e6;color:#6f655f}.item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item-main{min-width:0}.item-actions{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-start;align-items:center}.mini{border:0;border-radius:9px;padding:6px 8px;background:#eee7df;color:var(--brand);font-size:11px}.mini.danger{background:#f9e8e5;color:var(--red)}.mini.green{background:#e7efe9;color:var(--green)}
+.form{display:grid;gap:9px}.form input,.form select,.form textarea,.search{width:100%;border:1px solid var(--line);background:#fff;padding:11px;border-radius:12px;outline:none}.form input:focus,.form select:focus,.form textarea:focus,.search:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,148,90,.10)}.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.label{font-size:11px;color:var(--muted);margin-top:1px}.seg{display:flex;gap:6px;overflow:auto;padding-bottom:2px}.seg button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-size:11px;white-space:nowrap;color:var(--muted)}.seg button.active{background:#eee4da;color:var(--brand);border-color:#ddcdbc;font-weight:800}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}.money{font-weight:900}.subtle{background:#faf8f5;border-radius:12px;padding:10px;margin-top:8px;font-size:12px;line-height:1.8}.balance{font-size:12px;color:#6d5f55}.balance strong{color:var(--red)}.date-badge{font-size:10px;padding:5px 8px;border-radius:999px;background:#f4eee7;color:#776a60}.toolbar{display:flex;gap:8px;align-items:center}.toolbar .search{flex:1}.progress{height:7px;border-radius:10px;background:#eee8e2;overflow:hidden;margin-top:7px}.progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#8b6846,#c4a16c)}
+.catalog{display:grid;grid-template-columns:1fr 1fr;gap:9px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.product .pic{height:110px;background:linear-gradient(135deg,#e6dbcf,#c8ad91);display:grid;place-items:center;color:#fff;font-weight:900;font-size:18px}.product .body{padding:10px}.product h3{font-size:13px;margin:0 0 4px}.product p{font-size:11px;color:var(--muted);margin:0 0 8px;line-height:1.6}.product .actions{display:flex;gap:5px}.product .actions button{flex:1}
+.modal{position:fixed;inset:0;background:rgba(35,25,18,.45);display:none;align-items:flex-end;justify-content:center;z-index:20}.modal.open{display:flex}.sheet{width:min(760px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:18px}.sheet-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}.close{border:0;background:#eee5dd;color:var(--brand);border-radius:10px;padding:7px 10px}.timeline{display:flex;gap:6px;overflow:auto;padding:3px 0 10px}.step{min-width:92px;background:#faf8f5;border:1px solid var(--line);border-radius:12px;padding:9px;text-align:center}.step.active{background:#fff8ec;border-color:#c9a56b}.step b{display:block;font-size:11px}.step small{display:block;margin-top:3px;font-size:9px}.bottom-nav{position:fixed;z-index:10;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;justify-content:center;padding:7px;gap:2px}.bottom-nav button{border:0;background:transparent;color:var(--muted);font-size:10px;padding:7px 9px;border-radius:11px;min-width:58px}.bottom-nav button.active{background:#efe7df;color:var(--brand);font-weight:900}.empty{text-align:center;color:var(--muted);padding:22px 10px;font-size:12px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap}.hero-actions .btn{flex:1;min-width:130px}.right{text-align:right}.small-title{font-size:11px;color:var(--muted)}
+@media(min-width:700px){body{padding-bottom:24px}.bottom-nav{position:sticky;top:12px;bottom:auto;margin:0 auto 12px;max-width:760px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.app{padding-bottom:10px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand"><div class="logo">أ</div><div><div class="eyebrow">لوحة التشغيل • v4 Preview</div><h1>مفروشات الأصالة</h1></div></div>
+  <span class="pill">نسخة معاينة</span>
+</header>
+
+<section id="dashboard" class="view active">
+  <div class="welcome"><div class="eyebrow" style="color:#f4dfc0">مركز التشغيل</div><h2>كل ما يحتاجه العمل في شاشة واحدة</h2><p>متابعة العملاء، تنفيذ الطلبات، التسليم، والرسائل — مع تحسينات عملية بدون تحويل المشروع إلى نظام ضخم.</p></div>
+  <div class="grid">
+    <div class="stat"><div class="muted">عملاء محتملون / قيد المتابعة</div><div class="num" id="sProspects">0</div><small>مهتم • تفاوض • متابعة</small></div>
+    <div class="stat"><div class="muted">العملاء الفعليون</div><div class="num" id="sCustomers">0</div><small>اشتروا أو لديهم طلب</small></div>
+    <div class="stat"><div class="muted">الطلبيات</div><div class="num" id="sOrders">0</div><small id="sOrdersMeta">قيد التنفيذ: 0 • تم التسليم: 0</small></div>
+    <div class="stat"><div class="muted">متابعات مستحقة اليوم</div><div class="num" id="sFollow">0</div><small>اضغط لعرضها</small></div>
+  </div>
+  <div class="section"><h2>إجراءات سريعة</h2></div>
+  <div class="quick">
+    <button onclick="go('customers');focusId('customerName')"><b>＋</b>عميل جديد</button>
+    <button onclick="go('orders');focusId('orderCustomer')"><b>▣</b>طلب جديد</button>
+    <button onclick="go('marketing')"><b>↗</b>واتساب</button>
+  </div>
+  <div class="section"><h2>تقدم الطلبات</h2><button class="btn alt" onclick="go('orders')">عرض الطلبات</button></div>
+  <div class="panel"><div class="pipeline" id="pipeline"></div></div>
+  <div class="section"><h2>متابعات مستحقة اليوم</h2><button class="btn alt" onclick="go('customers');activeCustomerFilter='متابعة اليوم';renderCustomers()">عرض المتابعات</button></div>
+  <div class="panel" id="priorityList"></div>
+</section>
+
+<section id="customers" class="view">
+  <div class="section"><h2>العملاء والمتابعات</h2><button class="btn" onclick="resetCustomer();focusId('customerName')">+ عميل</button></div>
+  <div class="panel form">
+    <div class="label">بيانات العميل</div>
+    <input id="customerName" placeholder="اسم العميل">
+    <div class="row"><input id="customerPhone" placeholder="رقم الهاتف" inputmode="tel"><select id="customerStatus"><option>مهتم</option><option>تفاوض</option><option>اشترى</option><option>متابعة</option></select></div>
+    <div class="row"><div><div class="label">موعد متابعة العميل</div><input id="customerNext" type="date"></div><div><div class="label">مصدر العميل</div><select id="customerSource"><option>واتساب</option><option>فيسبوك</option><option>اتصال</option><option>زيارة المحل</option><option>إحالة من عميل</option><option>إعلان</option><option>أخرى</option></select></div></div>
+    <textarea id="customerAddress" placeholder="العنوان" rows="2"></textarea>
+    <input id="customerRequest" placeholder="طلب / احتياج العميل — مثال: مجلس عربي 5 × 4 متر"><textarea id="customerNote" placeholder="ملاحظة المتابعة — مثال: ينتظر اختيار القماش" rows="2"></textarea>
+    <button class="btn" id="customerSave" onclick="saveCustomer()">حفظ العميل</button>
+  </div>
+  <div class="section"><h2>تذكيرات المتابعة</h2></div>
+  <div class="panel" id="customerReminderList"></div>
+  <div class="section"><h2>سجل العملاء</h2></div>
+  <div class="toolbar"><input class="search" id="customerSearch" placeholder="ابحث بالاسم أو الهاتف أو العنوان" oninput="renderCustomers()"></div>
+  <div class="panel" style="padding:10px;display:flex;gap:7px;align-items:center;flex-wrap:wrap"><button class="mini" onclick="selectAllCustomers()">تحديد الكل</button><button class="mini" onclick="clearCustomerSelection()">إلغاء التحديد</button><button class="mini green" onclick="startBatchWhatsApp()">واتساب للمحددين</button><span class="muted" id="selectedCount">0 محدد</span></div>
+  <div class="seg" id="customerFilters" style="margin:8px 0 10px"></div>
+  <div class="panel" id="customerList"></div>
+</section>
+
+<section id="orders" class="view">
+  <div class="section"><h2>الطلبات والتنفيذ</h2><button class="btn" onclick="resetOrder();focusId('orderCustomer')">+ طلب</button></div>
+  <div class="panel form">
+    <div class="label">العميل والمنتج</div>
+    <select id="orderCustomer"><option value="">اختر العميل</option></select>
+    <div class="row"><select id="orderProduct"><option>مجلس عربي</option><option>غرفة نوم</option><option>ستائر</option><option>كنب</option><option>تفصيل خاص</option></select><select id="orderStatus"><option>جديد</option><option>أخذ المقاسات</option><option>قيد التفصيل</option><option>قيد التجهيز</option><option>جاهز</option><option>تم التسليم</option></select></div>
+    <div class="row"><input id="orderTotal" type="number" placeholder="السعر المتفق عليه"><input id="orderDeposit" type="number" placeholder="العربون"></div>
+    <div class="row"><div><div class="label">موعد التسليم</div><input id="orderDelivery" type="date"></div><div><div class="label">تذكير قبل</div><select id="orderReminderDays"><option value="3">3 أيام</option><option value="2" selected>يومين</option><option value="1">يوم</option></select></div></div>
+    <div class="row"><input id="orderSize" placeholder="المقاسات — مثال: 5 × 4 متر"><select id="orderSource"><option>من العميل مباشرة</option><option>واتساب</option><option>فيسبوك</option><option>اتصال</option><option>زيارة المحل</option><option>إحالة من عميل</option><option>إعلان</option><option>أخرى</option></select></div><input id="orderFabric" placeholder="الخامة / اللون / التفاصيل"><textarea id="orderNote" placeholder="ملاحظات التنفيذ" rows="2"></textarea>
+    <div class="notice" id="balancePreview">المتبقي سيظهر هنا بعد إدخال السعر والعربون.</div>
+    <button class="btn" id="orderSave" onclick="saveOrder()">حفظ الطلب</button>
+  </div>
+  <div class="section"><h2>مراحل التنفيذ</h2></div>
+  <div class="seg" id="orderFilters"></div>
+  <div class="panel" style="margin-top:9px" id="orderList"></div>
+</section>
+
+<section id="products" class="view">
+  <div class="section"><h2>كتالوج المنتجات</h2><button class="btn alt" onclick="toast('هذه نسخة معاينة — الصور قابلة للاستبدال لاحقًا')">تخصيص</button></div>
+  <div class="panel"><div class="notice">تصميم أولي للكتالوج: صورة، وصف مختصر، وزر إرسال مباشر للعميل عبر واتساب.</div></div>
+  <div class="catalog" id="productList" style="margin-top:10px"></div>
+</section>
+
+<section id="marketing" class="view">
+  <div class="section"><h2>واتساب والمتابعة</h2></div>
+  <div class="panel form">
+    <select id="messageType" onchange="renderMessage()"><option value="follow">متابعة عميل</option><option value="delivery">تذكير بالتسليم</option><option value="ready">الطلب جاهز</option><option value="offer">عرض مجالس عربية</option><option value="friday">رسالة عامة</option></select>
+    <select id="messageCustomer" onchange="syncMessageCustomer()"><option value="">اختر العميل</option></select>
+    <input id="messageName" placeholder="اسم العميل" oninput="renderMessage()">
+    <textarea id="messageText" rows="8"></textarea>
+    <div class="row"><button class="btn" onclick="copyText()">نسخ الرسالة</button><button class="btn alt" onclick="openWhatsApp()">فتح واتساب</button></div>
+    <div class="notice">الرسالة تُنشأ تلقائيًا، لكن الإرسال النهائي يبقى بيدك. في الإرسال المتسلسل: افتح العميل ثم اضغط إرسال في واتساب، وبعدها اضغط «تم الإرسال — التالي».</div>
+    <div class="panel" style="margin-top:10px"><b>مراسلة العملاء المحددين</b><div class="muted" id="batchProgress" style="margin:6px 0">لا توجد حملة مراسلة نشطة</div><div class="row"><button class="btn green" onclick="batchOpenCurrent()">فتح العميل الحالي</button><button class="btn alt" onclick="batchNext()">تم الإرسال — التالي</button><button class="btn ghost" onclick="endBatch()">إنهاء الحملة</button></div></div>
+  </div>
+  <div class="section"><h2>بيانات التواصل</h2></div>
+  <div class="panel">
+    <div class="item"><div class="item-main"><b>الهاتف الرئيسي</b><div class="muted">780597625</div></div><div class="item-actions"><button class="mini green" onclick="callPhone('967780597625')">اتصال</button><button class="mini" onclick="waPhone('967780597625')">واتساب</button></div></div>
+    <div class="item"><div class="item-main"><b>رقم إضافي</b><div class="muted">779822622</div></div><div class="item-actions"><button class="mini green" onclick="callPhone('967779822622')">اتصال</button></div></div>
+  </div>
+</section>
+
+<section id="settings" class="view">
+  <div class="section"><h2>الإعدادات والنسخ الاحتياطي</h2></div>
+  <div class="panel form">
+    <div class="notice">هذه النسخة تعمل محليًا داخل المتصفح. يمكنك تجربة الإضافة والتعديل والتصدير بدون خادم خارجي.</div>
+    <button class="btn alt" onclick="exportData()">تصدير نسخة احتياطية</button>
+    <label class="btn alt" style="text-align:center">استيراد نسخة<input type="file" id="importFile" accept=".json" hidden onchange="importData(event)"></label>
+    <button class="btn danger" onclick="resetDemo()">إعادة بيانات المعاينة</button>
+  </div>
+</section>
+
+<nav class="bottom-nav">
+  <button class="active" onclick="go('dashboard',this)">⌂<br>الرئيسية</button>
+  <button onclick="go('customers',this)">♙<br>العملاء</button>
+  <button onclick="go('orders',this)">▣<br>الطلبات</button>
+  <button onclick="go('products',this)">▤<br>الكتالوج</button>
+  <button onclick="go('marketing',this)">↗<br>واتساب</button>
+  <button onclick="go('settings',this)">⚙<br>الإعدادات</button>
+</nav>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="sheet"><div class="sheet-head"><div><div class="eyebrow" id="modalEyebrow">تفاصيل</div><h2 id="modalTitle" style="margin:3px 0">—</h2></div><button class="close" onclick="closeModal()">إغلاق</button></div><div id="modalBody"></div></div></div>
+<div id="toast" style="position:fixed;left:50%;bottom:95px;transform:translateX(-50%);background:#2d2722;color:#fff;padding:10px 13px;border-radius:12px;font-size:12px;display:none;z-index:40;box-shadow:var(--shadow)"></div>
+
+<script>
+const KEY='asalah_v4_preview';
+const stages=['جديد','أخذ المقاسات','قيد التفصيل','قيد التجهيز','جاهز','تم التسليم'];
+const productInfo=[
+ ['مجالس عربية','تفصيل حسب الطلب • مقاسات وخامات متعددة'],
+ ['غرف نوم','تصاميم متنوعة • تفصيل حسب الطلب'],
+ ['ستائر','أقمشة وخيارات متعددة'],
+ ['كنب','تصاميم منزلية وتجارية'],
+ ['تفصيل خاص','حسب المقاس والتصميم']
+];
+const todayKey=()=>new Date().toISOString().slice(0,10);
+const uid=()=>Date.now()+Math.floor(Math.random()*1000);
+const initial={customers:[
+ {id:1,name:'أحمد محمد',phone:'770123456',status:'تفاوض',next:addDays(1),address:'صنعاء — حدة',note:'ينتظر اختيار القماش'},
+ {id:2,name:'محمد علي',phone:'771654321',status:'اشترى',next:addDays(3),address:'صنعاء — شميلة',note:'يفضل التواصل مساءً'},
+ {id:3,name:'عبدالله سالم',phone:'772987654',status:'متابعة',next:todayKey(),address:'صنعاء — شَعوب',note:'طلب إرسال صور مجالس'}
+],orders:[
+ {id:11,customerId:1,product:'مجلس عربي',total:180000,deposit:60000,status:'قيد التفصيل',delivery:addDays(3),reminderDays:2,size:'5 × 4 متر',fabric:'بيج + بني',note:'تنفيذ حسب التصميم الأخير'},
+ {id:12,customerId:2,product:'غرفة نوم',total:260000,deposit:120000,status:'جاهز',delivery:addDays(1),reminderDays:2,size:'غرفة 4 × 4',fabric:'خشبي فاتح',note:'التنسيق مع العميل قبل التسليم'},
+ {id:13,customerId:3,product:'ستائر',total:85000,deposit:25000,status:'أخذ المقاسات',delivery:addDays(-1),reminderDays:2,size:'3 نوافذ',fabric:'سكري',note:'الموعد يحتاج إعادة تنسيق'}
+]};
+let data=load();let editCustomerId=null,editOrderId=null;let activeCustomerFilter='الكل';let activeOrderFilter='الكل';
+function addDays(n){const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY));return x&&x.customers&&x.orders?x:structuredClone(initial)}catch{return structuredClone(initial)}}
+function save(){localStorage.setItem(KEY,JSON.stringify(data));renderAll()}
+function el(id){return document.getElementById(id)}
+function safe(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function money(n){return Number(n||0).toLocaleString('en-US')+' ر.ي'}
+function customerById(id){return data.customers.find(c=>Number(c.id)===Number(id))}
+function orderCustomer(o){return customerById(o.customerId)||{name:o.customer||'غير مرتبط',phone:''}}
+function go(id,btn){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));el(id).classList.add('active');document.querySelectorAll('.bottom-nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderAll()}
+function focusId(id){setTimeout(()=>el(id)?.focus(),80)}
+function toast(msg){const t=el('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.style.display='none',1800)}
+function statusTag(s){const cls=s==='جاهز'?'gold':s==='جديد'?'blue':s==='تم التسليم'?'gray':'';return `<span class="tag ${cls}">${safe(s)}</span>`}
+function dayDiff(date){if(!date)return null;const a=new Date(date+'T00:00:00');const b=new Date(todayKey()+'T00:00:00');return Math.round((a-b)/86400000)}
+
+function renderAll(){renderDashboard();renderCustomerOptions();renderCustomers();renderCustomerReminders();renderOrders();renderProducts();renderMarketing()}
+function renderDashboard(){
+ const active=data.orders.filter(o=>o.status!=='تم التسليم');const delivered=data.orders.filter(o=>o.status==='تم التسليم');const hasOrder=c=>data.orders.some(o=>Number(o.customerId)===Number(c.id));const prospects=data.customers.filter(c=>!hasOrder(c)&&['مهتم','تفاوض','متابعة'].includes(c.status));const actual=data.customers.filter(c=>c.status==='اشترى'||hasOrder(c));const follow=data.customers.filter(c=>!hasOrder(c)&&c.next&&dayDiff(c.next)===0&&['مهتم','تفاوض','متابعة'].includes(c.status));
+ el('sProspects').textContent=prospects.length;el('sCustomers').textContent=actual.length;el('sOrders').textContent=active.length;el('sOrdersMeta').textContent=`قيد التنفيذ: ${active.length} • تم التسليم: ${delivered.length}`;el('sFollow').textContent=follow.length;
+ const counts=Object.fromEntries(stages.map(s=>[s,0]));data.orders.forEach(o=>counts[o.status]=(counts[o.status]||0)+1);
+ el('pipeline').innerHTML=stages.map(s=>`<button class="stage ${s===activeOrderFilter?'active':''}" onclick="go('orders');activeOrderFilter='${s}';renderOrders()"><b>${counts[s]||0}</b><span>${s}</span></button>`).join('');
+ const due=follow.slice(0,6);
+ el('priorityList').innerHTML=due.map(c=>`<div class="task"><div class="main"><b>${safe(c.name)}</b><div class="meta">موعد المتابعة اليوم • ${safe(c.note||c.request||'بدون ملاحظة')}</div></div><div class="item-actions"><button class="mini green" onclick="startCustomerWhatsApp(${c.id})">واتساب</button><button class="mini" onclick="editCustomer(${c.id})">متابعة</button></div></div>`).join('')||'<div class="empty">لا توجد متابعات مستحقة اليوم</div>';
+}
+
+function resetCustomer(){editCustomerId=null;['customerName','customerPhone','customerAddress','customerNote','customerNext','customerRequest'].forEach(x=>el(x).value='');el('customerStatus').value='مهتم';el('customerSource').value='واتساب';el('customerSave').textContent='حفظ العميل'}
+function saveCustomer(){const name=el('customerName').value.trim();if(!name)return toast('اكتب اسم العميل');const item={id:editCustomerId||uid(),name,phone:el('customerPhone').value.trim(),status:el('customerStatus').value,next:el('customerNext').value,lastFollowUp:(editCustomerId?((customerById(editCustomerId)||{}).lastFollowUp||''):'') ,source:el('customerSource').value,request:el('customerRequest').value.trim(),address:el('customerAddress').value.trim(),note:el('customerNote').value.trim()};if(editCustomerId)data.customers=data.customers.map(c=>c.id===editCustomerId?item:c);else data.customers.unshift(item);resetCustomer();save();toast('تم حفظ العميل')}
+function editCustomer(id){const c=customerById(id);if(!c)return;editCustomerId=id;el('customerName').value=c.name;el('customerPhone').value=c.phone||'';el('customerStatus').value=c.status||'مهتم';el('customerNext').value=c.next||'';el('customerSource').value=c.source||'واتساب';el('customerRequest').value=c.request||'';el('customerAddress').value=c.address||'';el('customerNote').value=c.note||'';el('customerSave').textContent='تحديث العميل';go('customers')}
+function deleteCustomer(id){if(!confirm('حذف العميل؟'))return;data.customers=data.customers.filter(c=>c.id!==id);data.orders=data.orders.filter(o=>Number(o.customerId)!==Number(id));save();toast('تم الحذف')}
+function renderCustomerFilters(){el('customerFilters').innerHTML=['الكل','متابعة اليوم','تمت المتابعة','مهتم','تفاوض','اشترى','متابعة'].map(f=>`<button class="${activeCustomerFilter===f?'active':''}" onclick="activeCustomerFilter='${f}';renderCustomers()">${f}</button>`).join('')}
+function renderCustomers(){renderCustomerFilters();const q=(el('customerSearch')?.value||'').toLowerCase();const hasOrder=c=>data.orders.some(o=>Number(o.customerId)===Number(c.id));const list=data.customers.filter(c=>{const actual=c.status==='اشترى'||hasOrder(c);const match=activeCustomerFilter==='الكل'||(activeCustomerFilter==='متابعة اليوم'?(c.next===todayKey()&&!actual&&['مهتم','تفاوض','متابعة'].includes(c.status)):activeCustomerFilter==='تمت المتابعة'?!!c.lastFollowUp:activeCustomerFilter==='اشترى'?actual:c.status===activeCustomerFilter);return match&&`${c.name} ${c.phone} ${c.address} ${c.request||''} ${c.source||''}`.toLowerCase().includes(q)});el('customerList').innerHTML=list.map(c=>{const orders=data.orders.filter(o=>Number(o.customerId)===Number(c.id));const actual=c.status==='اشترى'||orders.length>0;const displayStatus=actual?'اشترى':(c.status||'مهتم');const d=dayDiff(c.next);const reminder=c.next?(d<0?`متأخر ${Math.abs(d)} يوم`:d===0?'متابعة اليوم':`متابعة بعد ${d} يوم`):'بدون موعد متابعة';const followed=c.lastFollowUp?`آخر متابعة: ${safe(c.lastFollowUp)}`:'لم تتم متابعة مسجلة';return `<div class="item"><div class="item-main"><div><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" class="customer-check" value="${c.id}" onchange="updateSelectedCount()"><b>${safe(c.name)}</b></label></div><div class="muted">${safe(c.phone||'بدون رقم')} • ${orders.length} طلب${orders.some(o=>o.status==='تم التسليم')?` • ${orders.filter(o=>o.status==='تم التسليم').length} تم التسليم`:''}</div><div class="muted">${safe(c.address||'بدون عنوان')}</div><div class="muted">${safe(c.request||'بدون طلب محدد')}</div><div class="muted">المصدر: ${safe(c.source||'غير محدد')}</div><div class="muted">${followed}</div><div class="muted">${safe(c.note||'')}</div></div><div class="right"><div>${statusTag(displayStatus)}</div><div class="date-badge" style="margin-top:5px">${safe(reminder)}</div><div class="item-actions" style="margin-top:6px"><button class="mini" onclick="openCustomer(${c.id})">الملف</button><button class="mini" onclick="editCustomer(${c.id})">تعديل</button><button class="mini" onclick="markFollowed(${c.id})">تمت المتابعة</button><button class="mini green" onclick="startCustomerWhatsApp(${c.id})">واتساب</button><button class="mini danger" onclick="deleteCustomer(${c.id})">حذف</button></div></div></div>`}).join('')||'<div class="empty">لا يوجد عملاء بهذه المواصفات</div>'}
+function renderCustomerReminders(){const list=data.customers.filter(c=>c.next&&dayDiff(c.next)<=0&&c.status!=='اشترى');el('customerReminderList').innerHTML=list.map(c=>`<div class="task"><div class="main"><b>${safe(c.name)}</b><div class="meta">${c.next===todayKey()?'موعد المتابعة اليوم':'متابعة متأخرة'} • ${safe(c.note||'بدون ملاحظة')}</div></div><div class="item-actions"><button class="mini green" onclick="startCustomerWhatsApp(${c.id})">واتساب</button><button class="mini" onclick="markFollowed(${c.id})">تمت</button></div></div>`).join('')||'<div class="empty">لا توجد متابعة مستحقة</div>'}
+function markFollowed(id){const c=customerById(id);if(!c)return;c.lastFollowUp=todayKey();c.next=addDays(7);save();toast('تم تسجيل أن العميل تمت متابعته وتحديد الموعد القادم بعد 7 أيام')}
+function openCustomer(id){const c=customerById(id);if(!c)return;const orders=data.orders.filter(o=>Number(o.customerId)===Number(id));el('modalEyebrow').textContent='ملف العميل';el('modalTitle').textContent=c.name;el('modalBody').innerHTML=`<div class="kpi-row"><div class="kpi"><b>${orders.length}</b><span>الطلبات</span></div><div class="kpi"><b>${orders.filter(o=>o.status!=='تم التسليم').length}</b><span>نشطة</span></div><div class="kpi"><b>${orders.filter(o=>o.status==='تم التسليم').length}</b><span>مكتملة</span></div></div><div class="subtle"><b>الهاتف:</b> ${safe(c.phone||'غير مسجل')}<br><b>العنوان:</b> ${safe(c.address||'غير مسجل')}<br><b>المصدر:</b> ${safe(c.source||'غير محدد')}<br><b>طلب العميل:</b> ${safe(c.request||'غير محدد')}<br><b>الحالة:</b> ${safe(c.status==='اشترى'||orders.length?'اشترى':c.status)}<br><b>آخر متابعة فعلية:</b> ${safe(c.lastFollowUp||'لم تسجل')}<br><b>المتابعة القادمة:</b> ${safe(c.next||'غير محددة')}<br><b>ملاحظات:</b> ${safe(c.note||'لا توجد')}</div><div class="section"><h2>سجل الطلبات</h2></div>${orders.map(o=>`<div class="item"><div class="item-main"><b>${safe(o.product)}</b><div class="muted">${money(o.total)} • المتبقي ${money(Math.max(0,o.total-o.deposit))}</div></div><div class="item-actions">${statusTag(o.status)}<button class="mini" onclick="closeModal();openOrder(${o.id})">فتح</button></div></div>`).join('')||'<div class="empty">لا توجد طلبات</div>'}`;el('modal').classList.add('open')}
+function startCustomerWhatsApp(id){const c=customerById(id);if(!c)return;go('marketing');el('messageCustomer').value=String(id);syncMessageCustomer()}
+
+function renderCustomerOptions(){const cur=el('orderCustomer').value;el('orderCustomer').innerHTML='<option value="">اختر العميل</option>'+data.customers.map(c=>`<option value="${c.id}">${safe(c.name)} — ${safe(c.phone||'بدون رقم')}</option>`).join('');if(cur)el('orderCustomer').value=cur;}
+function resetOrder(){editOrderId=null;['orderCustomer','orderTotal','orderDeposit','orderDelivery','orderSize','orderFabric','orderNote'].forEach(x=>el(x).value='');el('orderStatus').value='جديد';el('orderReminderDays').value='2';el('orderSource').value='من العميل مباشرة';el('orderSave').textContent='حفظ الطلب';updateBalance()}
+function saveOrder(){const customerId=Number(el('orderCustomer').value||0);if(!customerId)return toast('اختر العميل أولًا');const total=Number(el('orderTotal').value||0),deposit=Number(el('orderDeposit').value||0);if(deposit>total)return toast('العربون أكبر من السعر');const item={id:editOrderId||uid(),customerId,product:el('orderProduct').value,total,deposit,status:el('orderStatus').value,delivery:el('orderDelivery').value,reminderDays:Number(el('orderReminderDays').value||2),source:el('orderSource').value,size:el('orderSize').value.trim(),fabric:el('orderFabric').value.trim(),note:el('orderNote').value.trim()};if(editOrderId)data.orders=data.orders.map(o=>o.id===editOrderId?item:o);else data.orders.unshift(item);const c=customerById(customerId);if(c)c.status='اشترى';resetOrder();save();toast(item.status==='تم التسليم'?'تم حفظ الطلب وتسجيل العميل كعميل فعلي':'تم حفظ الطلب وتسجيل العميل كعميل فعلي')}
+function editOrder(id){const o=data.orders.find(x=>x.id===id);if(!o)return;editOrderId=id;el('orderCustomer').value=o.customerId;el('orderProduct').value=o.product;el('orderTotal').value=o.total||'';el('orderDeposit').value=o.deposit||'';el('orderStatus').value=o.status||'جديد';el('orderDelivery').value=o.delivery||'';el('orderReminderDays').value=String(o.reminderDays||2);el('orderSource').value=o.source||'من العميل مباشرة';el('orderSize').value=o.size||'';el('orderFabric').value=o.fabric||'';el('orderNote').value=o.note||'';el('orderSave').textContent='تحديث الطلب';updateBalance();go('orders')}
+function deleteOrder(id){if(!confirm('حذف الطلب؟'))return;data.orders=data.orders.filter(o=>o.id!==id);save();toast('تم حذف الطلب')}
+function renderOrderFilters(){el('orderFilters').innerHTML=['الكل',...stages].map(f=>`<button class="${activeOrderFilter===f?'active':''}" onclick="activeOrderFilter='${f}';renderOrders()">${f}</button>`).join('')}
+function renderOrders(){renderOrderFilters();const q=(el('orderSearch')?.value||'').toLowerCase();const list=data.orders.filter(o=>(activeOrderFilter==='الكل'||o.status===activeOrderFilter)&&`${orderCustomer(o).name} ${o.product}`.toLowerCase().includes(q));el('orderList').innerHTML=list.map(o=>{const c=orderCustomer(o),d=dayDiff(o.delivery),bal=Math.max(0,Number(o.total||0)-Number(o.deposit||0));let due=d===null?'بدون موعد':d<0?`متأخر ${Math.abs(d)} يوم`:d===0?'اليوم':`بعد ${d} يوم`;return `<div class="item"><div class="item-main" style="flex:1"><b>${safe(c.name)}</b><div class="muted">${safe(o.product)} • ${safe(due)} • ${safe(o.delivery||'')}</div><div class="muted">${o.size?`المقاس: ${safe(o.size)} • `:''}${o.fabric?safe(o.fabric):''}</div><div class="subtle">${safe(o.note||'لا توجد ملاحظات')}</div><div style="margin-top:6px"><span class="balance">المتبقي: <strong>${money(bal)}</strong></span></div></div><div class="right"><div>${statusTag(o.status)}</div><div class="progress"><i style="width:${(stages.indexOf(o.status)+1)/stages.length*100}%"></i></div><div class="item-actions" style="margin-top:7px"><button class="mini" onclick="openOrder(${o.id})">فتح</button><button class="mini green" onclick="prepareOrderMessage(${o.id})">واتساب</button>${o.status!=='تم التسليم'?`<button class="mini green" onclick="markOrderDelivered(${o.id})">تم تسليم الطلبية</button>`:''}<button class="mini danger" onclick="deleteOrder(${o.id})">حذف</button></div></div></div>`}).join('')||'<div class="empty">لا توجد طلبات بهذه المرحلة</div>'}
+function openOrder(id){const o=data.orders.find(x=>x.id===id);if(!o)return;const c=orderCustomer(o),idx=stages.indexOf(o.status);const bal=Math.max(0,o.total-o.deposit);el('modalEyebrow').textContent='تفاصيل الطلب';el('modalTitle').textContent=`${c.name} — ${o.product}`;el('modalBody').innerHTML=`<div class="kpi-row"><div class="kpi"><b>${money(o.total).replace(' ر.ي','')}</b><span>الإجمالي</span></div><div class="kpi"><b>${money(o.deposit).replace(' ر.ي','')}</b><span>العربون</span></div><div class="kpi"><b>${money(bal).replace(' ر.ي','')}</b><span>المتبقي</span></div></div><div class="section"><h2>مسار التنفيذ</h2><button class="btn alt" onclick="advanceOrder(${o.id})">${o.status==='تم التسليم'?'إعادة فتح':'المرحلة التالية →'}</button></div><div class="timeline">${stages.map((s,i)=>`<div class="step ${i<=idx?'active':''}"><b>${s}</b><small>${i<=idx?'تم الوصول':'قادم'}</small></div>`).join('')}</div><div class="subtle"><b>مصدر الطلب:</b> ${safe(o.source||'غير محدد')}<br><b>التسليم:</b> ${safe(o.delivery||'غير محدد')}<br><b>المقاس:</b> ${safe(o.size||'غير محدد')}<br><b>الخامة:</b> ${safe(o.fabric||'غير محددة')}<br><b>الملاحظات:</b> ${safe(o.note||'لا توجد')}</div><div class="section"><h2>إجراءات</h2></div><div class="hero-actions"><button class="btn alt" onclick="editOrder(${o.id});closeModal()">تعديل الطلب</button><button class="btn" onclick="prepareOrderMessage(${o.id});closeModal()">إرسال واتساب</button>${idx>0&&idx<stages.length-1?`<button class="btn ghost" onclick="setOrderStage(${o.id},${idx-1});closeModal()">← مرحلة سابقة</button>`:''}</div>`;el('modal').classList.add('open')}
+
+function markOrderDelivered(id){const o=data.orders.find(x=>x.id===id);if(!o)return;if(o.status==='تم التسليم')return toast('الطلب مسجل بالفعل كتم التسليم');o.status='تم التسليم';const c=customerById(o.customerId);if(c)c.status='اشترى';save();toast('تم تسجيل تسليم الطلبية وتحديث العميل كعميل فعلي')}
+function advanceOrder(id){const o=data.orders.find(x=>x.id===id);if(!o)return;let i=stages.indexOf(o.status);o.status=i===stages.length-1?'جديد':stages[i+1];if(o.status==='تم التسليم'){const c=customerById(o.customerId);if(c)c.status='اشترى';}save();toast(o.status==='تم التسليم'?'تم التسليم وتحديث حالة العميل':'تم تحديث مرحلة الطلب');openOrder(id)}
+function setOrderStage(id,i){const o=data.orders.find(x=>x.id===id);if(!o)return;o.status=stages[Math.max(0,Math.min(stages.length-1,i))];if(o.status==='تم التسليم'){const c=customerById(o.customerId);if(c)c.status='اشترى';}save()}
+function updateBalance(){const total=Number(el('orderTotal').value||0),dep=Number(el('orderDeposit').value||0);el('balancePreview').innerHTML=total?`<b>المتبقي:</b> <span style="color:${Math.max(0,total-dep)>0?'var(--red)':'var(--green)'}">${money(Math.max(0,total-dep))}</span>`:'المتبقي سيظهر هنا بعد إدخال السعر والعربون.'}
+el('orderTotal').addEventListener('input',updateBalance);el('orderDeposit').addEventListener('input',updateBalance);
+function prepareOrderMessage(id){const o=data.orders.find(x=>x.id===id);if(!o)return;go('marketing');el('messageCustomer').value=String(o.customerId);syncMessageCustomer();el('messageType').value=o.status==='جاهز'?'ready':'delivery';renderMessage()}
+
+function renderProducts(){el('productList').innerHTML=productInfo.map((p,i)=>`<article class="product"><div class="pic">${['مجلس','غرفة','ستائر','كنب','خاص'][i]}</div><div class="body"><h3>${p[0]}</h3><p>${p[1]}</p><div class="actions"><button class="mini" onclick="sendProduct(${i})">إرسال واتساب</button></div></div></article>`).join('')}
+function sendProduct(i){go('marketing');el('messageType').value='offer';renderMessage();el('messageText').value+=`\n\nالخيار المقترح: ${productInfo[i][0]}`;toast('تم تجهيز الرسالة')}
+
+function updateSelectedCount(){const checks=[...document.querySelectorAll('.customer-check')];selectedCustomers=new Set(checks.filter(x=>x.checked).map(x=>Number(x.value)));const n=el('selectedCount');if(n)n.textContent=`${selectedCustomers.size} محدد`;}
+function selectAllCustomers(){document.querySelectorAll('.customer-check').forEach(x=>x.checked=true);updateSelectedCount();}
+function clearCustomerSelection(){document.querySelectorAll('.customer-check').forEach(x=>x.checked=false);selectedCustomers.clear();updateSelectedCount();}
+function startBatchWhatsApp(){const ids=[...selectedCustomers].filter(id=>customerById(id)?.phone);if(!ids.length)return toast('حدد عملاء لديهم أرقام واتساب');batchQueue=ids;batchIndex=0;go('marketing');renderBatchProgress();batchOpenCurrent();}
+function renderBatchProgress(){const b=el('batchProgress');if(!b)return;b.textContent=batchQueue.length?`العميل ${Math.min(batchIndex+1,batchQueue.length)} من ${batchQueue.length} — ${customerById(batchQueue[batchIndex])?.name||''}`:'لا توجد حملة مراسلة نشطة';}
+function batchOpenCurrent(){if(!batchQueue.length)return toast('حدد العملاء أولًا');if(batchIndex>=batchQueue.length)return endBatch();const id=batchQueue[batchIndex];el('messageCustomer').value=String(id);syncMessageCustomer();openWhatsApp();renderBatchProgress();}
+function batchNext(){if(!batchQueue.length)return toast('لا توجد حملة مراسلة نشطة');const id=batchQueue[batchIndex];const c=customerById(id);if(c){c.lastFollowUp=todayKey();c.next=c.next||addDays(3);if(['مهتم','تفاوض','متابعة'].includes(c.status))c.status='متابعة';}batchIndex++;if(batchIndex>=batchQueue.length){save();toast('اكتملت مراسلة جميع العملاء المحددين');endBatch();return}save();renderBatchProgress();batchOpenCurrent();}
+function endBatch(){batchQueue=[];batchIndex=0;renderBatchProgress();toast('تم إنهاء حملة المراسلة');}
+function renderMarketing(){const cur=el('messageCustomer').value;el('messageCustomer').innerHTML='<option value="">اختر العميل</option>'+data.customers.map(c=>`<option value="${c.id}">${safe(c.name)}</option>`).join('');if(cur)el('messageCustomer').value=cur;renderMessage()}
+function syncMessageCustomer(){const id=Number(el('messageCustomer').value||0);const c=customerById(id);el('messageName').value=c?.name||'';renderMessage()}
+function renderMessage(){const n=el('messageName').value.trim()||'عميلنا العزيز';const t=el('messageType').value;let m='';if(t==='delivery')m=`السلام عليكم ${n}، معك مفروشات الأصالة.\nنذكّركم بموعد تسليم طلبكم حسب الموعد المحدد.\nنسعد بخدمتكم.\n📞 780597625`;else if(t==='ready')m=`السلام عليكم ${n}، معك مفروشات الأصالة.\nنسعد بإبلاغكم بأن طلبكم أصبح جاهزًا للتسليم.\nللتنسيق والاستفسار: 📞 780597625`;else if(t==='offer')m=`السلام عليكم ${n}، معك مفروشات الأصالة.\nنوفر مجالس عربية بتفصيل حسب المقاس وخيارات متعددة للخامات والألوان.\nيسعدنا إرسال الخيارات المناسبة لكم.\n📞 780597625`;else if(t==='friday')m=`جمعة مباركة من مفروشات الأصالة 🌿\nنتمنى لكم يومًا طيبًا ونسعد بخدمتكم.\n📞 780597625`;else m=`السلام عليكم ${n}، معك مفروشات الأصالة.\nحبيت أطمئن عليك، وإذا ما زلت مهتمًا بالأثاث يسعدنا نساعدك ونرسل لك الخيارات المناسبة.\n📞 780597625`;el('messageText').value=m}
+function copyText(){navigator.clipboard?.writeText(el('messageText').value).then(()=>toast('تم نسخ الرسالة')).catch(()=>toast('انسخ النص يدويًا'))}
+function openWhatsApp(){const id=Number(el('messageCustomer').value||0),c=customerById(id);const phone=(c?.phone||'').replace(/\D/g,'');const target=phone?(phone.startsWith('967')?phone:'967'+phone):'967780597625';window.open(`https://wa.me/${target}?text=${encodeURIComponent(el('messageText').value)}`,'_blank')}
+function waPhone(p){window.open(`https://wa.me/${p}`,'_blank')}function callPhone(p){window.location.href=`tel:+${p}`}
+function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='asalah-v4-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function importData(e){const f=e.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x.customers||!x.orders)throw Error();data=x;save();toast('تم الاستيراد')}catch{toast('ملف غير صالح')}};r.readAsText(f)}
+function resetDemo(){if(confirm('إعادة بيانات المعاينة الأصلية؟')){data=structuredClone(initial);save();toast('تمت إعادة البيانات')}}
+function closeModal(){el('modal').classList.remove('open')}
+
+// hidden search field for compatibility with rendering without clutter
+const orderSearch=document.createElement('input');orderSearch.id='orderSearch';orderSearch.style.display='none';document.body.appendChild(orderSearch);
+renderAll();
+</script>
+</body>
+</html>
